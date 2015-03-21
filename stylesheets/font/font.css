@@ -1,0 +1,13 @@
+@font-face {
+  font-family:'PingHei';
+  font-style:normal;
+  font-weight:200;
+  src:local('â˜ºï¸Ž'), url("wss/fonts/PingHei/v1/PingHei-light.woff") format("woff"), url("wss/fonts/PingHei/v1/PingHei-light.ttf") format("truetype");
+  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
+@font-face {
+  font-family:'PingHei 200';
+  src:url("wss/fonts/PingHei/v1/PingHei-light.eot");
+  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
