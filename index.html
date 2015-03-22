@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>
-
-      理解 GitHub Flow &middot; GitHub 指南
-
+    理解 GitHub Flow &middot; GitHub 指南
   </title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="components/gridism/gridism.css">
@@ -22,7 +19,6 @@
   <script src="javascripts/application.js" type="text/javascript"></script>
 </head>
 <body>
-
   <header>
     <div class="wrap">
       <ul class="links">
@@ -44,195 +40,183 @@
       </div>
       <h1>理解 Github Flow</h1>
       <span class="article-read-time">
-        <span class="octicon octicon-clock"></span> 5 minute read
+        <span class="octicon octicon-clock"></span>阅读时间5分钟
       </span>
     </div>
   </div>
 
-
   <div class="wrap">
-
     <div class="markdown-body content-body full-width">
-      <p>GitHub Flow 是一个非常轻便的，基于分支的工作流。非常适合代码部署非常频繁的团队和项目。这里这篇指南中咱们一起看看 Github Flow 好用在哪，如何来用。 </p>
+    <p>GitHub Flow 是一个非常轻便的，基于分支的工作流。非常适合代码部署非常频繁的团队和项目。这里这篇指南中咱们一起看看 Github Flow 好用在哪，如何来用。 </p>
 
-<script type="text/javascript" src="javascripts/flow.js"></script>
+    <script type="text/javascript" src="javascripts/flow.js"></script>
+    <p><link rel="stylesheet" type="text/css" href="stylesheets/flow.css"></p>
 
+    <div class="scrollable-diagram js-scrollable-diagram">
+      <div class="features-branch-diagram" id="js-features-branch-diagram">
+        <svg width="930px" height="350" id="js-features-branch-diagram-svg" xmlns="http://www.w3.org/2000/svg">
+          <path d="M66.2711864,5.96363636 C135.523206,5.96363636 143.460673,112 191.02837,112 C238.596067,112 681.049887,112 725.83852,112 C770.627152,112 786.056674,5.95721244 855.110732,5.96363636" id="js-branch-diagram-branch" stroke="#4182C4" stroke-width="4" fill="none"></path>
+          <path d="M0,7 L766,7 L920,7" id="js-branch-diagram-master" stroke="#c6d9ed" stroke-width="8"></path>
+          <path id="js-branch-diagram-arrow" d="M907.2,10 C910.98,8.95 915.22,8.05 918,7 C914.22,5.95 910.98,5.05 907.2,4" stroke="#c6d9ed" stroke-width="8" fill="none"></path>
+        </svg>
 
-<p><link rel="stylesheet" type="text/css" href="stylesheets/flow.css"></p>
-
-<div class="scrollable-diagram js-scrollable-diagram">
-  <div class="features-branch-diagram" id="js-features-branch-diagram">
-    <svg width="930px" height="350" id="js-features-branch-diagram-svg" xmlns="http://www.w3.org/2000/svg">
-      <path d="M66.2711864,5.96363636 C135.523206,5.96363636 143.460673,112 191.02837,112 C238.596067,112 681.049887,112 725.83852,112 C770.627152,112 786.056674,5.95721244 855.110732,5.96363636" id="js-branch-diagram-branch" stroke="#4182C4" stroke-width="4" fill="none"></path>
-      <path d="M0,7 L766,7 L920,7" id="js-branch-diagram-master" stroke="#c6d9ed" stroke-width="8"></path>
-      <path id="js-branch-diagram-arrow" d="M907.2,10 C910.98,8.95 915.22,8.05 918,7 C914.22,5.95 910.98,5.05 907.2,4" stroke="#c6d9ed" stroke-width="8" fill="none"></path>
-    </svg>
-
-    <div class="diagram-icon js-diagram-icon diagram-icon-branch" data-diagram-step="branch">
-      <span class="mega-octicon octicon-git-branch"></span>
+        <div class="diagram-icon js-diagram-icon diagram-icon-branch" data-diagram-step="branch">
+          <span class="mega-octicon octicon-git-branch"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-1" data-diagram-step="commits">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-2" data-diagram-step="commits">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-3" data-diagram-step="commits">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon js-diagram-icon diagram-icon-pr" data-diagram-step="pr">
+          <span class="mega-octicon octicon-git-pull-request"></span>
+        </div>
+        <div class="diagram-icon js-diagram-icon diagram-icon-merge" data-diagram-step="merge">
+          <span class="mega-octicon octicon-git-merge"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-1" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-comment-discussion"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-4" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-2" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-comment-discussion"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-5" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-3" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-comment-discussion"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-6" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-4" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-comment-discussion"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-7" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-git-commit"></span>
+        </div>
+        <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-5" data-diagram-step="code-review">
+          <span class="mega-octicon octicon-comment-discussion"></span>
+        </div>
+      </div>
     </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-1" data-diagram-step="commits">
-      <span class="mega-octicon octicon-git-commit"></span>
+
+    <div class="flow-content">
+      <div class="panel-content js-panel-content js-panel-content-branch" data-step="branch">
+        <h3>创建一个分支</h3>
+        <p>
+          当你在开发一个项目的时候，一般在同一时刻你会同时开展多个想法，其中一些比较成熟了，另一些还是很初级。有了分支就可以很好的来进行管理了。
+        </p>
+        <p>
+          当你在项目中创建一个分支的时候，你正在搭建一个可以尝试新想法的环境。你在新分支上所做的修改不会影响到<code>主（master）</code>
+          分支，所以你能自由实验和提交修改，在知道你的分支不会被合并直到它准备好了由你的合作伙伴审阅的情况下，所有操作都是安全的。
+        </p>
+        <h4>深度技巧</h4>
+        <p>
+          分支是 Git 的一个核心概念，整个 GitHub Flow 也是基于它的。只有一个规则：<code>主（master）</code>分支上的任何内容总是可部署的。
+        </p>
+        <p>
+          正因为如此，当开发一个新功能或者修复错误的时候，你的新分支独立于主分支是极其重要的。你的分支名应该见名知义（
+          例如，<code>重构身份认证</code>，<code>用户内容缓冲键值</code>，<code>制作 retina 头像</code>），
+          以便让其他人知道你正在做什么工作。
+        </p>
+      </div>
+
+      <div class="panel-content js-panel-content js-panel-content-commits" data-step="commits">
+        <h3>添加新版本</h3>
+        <p>
+          一旦你的分支创建好之后，就可以开始做些修改了。不论何时你添加，编辑或者删除一个文件，你就做一个版本，然后把它们添加到你的分支中。
+          添加版本的过程就跟踪了你在一个功能分支上的工作进展。
+        </p>
+        <p>
+          版本也为你的工作创建了一个透明的历史，其他人可以跟随着去理解你所做的工作以及为什么要这样做。每一个版本都有一条相关联的版本信息，
+          版本信息是一段描述，解释了为什么要做这样一个特殊的修改。此外，每一个版本都可以看作是一个独立的修改单元。
+          这可以让你回滚这些更改，若你发现一个 bug，或者决定在一个不同方向尝试的时候。
+        </p>
+        <h4>深度技巧</h4>
+        <p>
+          版本信息很重要，尤其因为 Git 能跟踪你的修改，一旦这些修改被推送到服务器上，Git 会以版本的形式显示它们。
+          通过书写清楚的版本信息，你可以更容易让其他人跟随你的修改并提供反馈。
+        </p>
+      </div>
+
+      <div class="panel-content js-panel-content js-panel-content-pr" data-step="pr">
+        <h3>开启一个 Pull Request</h3>
+        <p>Pull Requests 发起讨论你的版本。因为它们与底层的 Git 仓库紧密地集成起来，任何人都能确切地看到什么修改应该合并，若他们接受你的请求。</p>
+        <p>
+          在开发过程中的任意时点，你都可以开启一个 Pull Request：当你有很少或没有代码，但想要分享一些截图或基本想法的时候，
+          当你陷入困境需要帮助和建议的时候，或者当你准备好让他人审核你工作的时候。通过在你的 Pull Request
+          信息中使用 GitHub 的 @mention 系统，你可以向特定的人或团队请求反馈，不管他们身处大厅还是离你有十个时区之遥。
+        </p>
+        <h4>深度技巧</h4>
+        <p>
+          Pull Requests 对贡献开源项目和管理共享仓库的变动是非常有用的。若你正使用 Fork &amp; Pull 模式，Pull Resquests
+          提供了一种方式来通知项目维护者你希望他们考虑一下你提交的修改。若你正使用一个共享仓库模式，在提议修改被合并到主分支中之前，Pull Resquests
+          帮助启动对修改的代码审核和讨论。
+        </p>
+      </div>
+
+      <div class="panel-content js-panel-content js-panel-content-code-review" data-step="code-review">
+        <h3>讨论和代码审核</h3>
+        <p>
+          一旦开启了一个 Pull Request，审核你所做修改的人或团队可能会提出问题或评论。可能是编码风格不符合项目指南，
+          修改缺少单元测试，或许一切看起来都很棒且支持也整齐有序。Pull Requests 就是为鼓励和捕捉这种类型的讨论而设计的。
+        </p>
+        <p>
+          根据对你所做版本的讨论和反馈，你也可以继续往你的分支上推送代码。若有人评论说你忘记做某件事或你的代码中存在
+          bug，你可以在你的分支中修复它，并提交这些修改。Github 将会在一个统一的
+          Pull Request 视图中展示你的新版本和你可能收到的任何额外的反馈。
+        </p>
+        <h4>深度技巧</h4>
+        <p>
+          Pull Request 评论是用 Markdown 书写的，所以你可以在评论中嵌入图片和
+          emoji 表情符号，使用带有格式的文本块，和其它轻量级格式。
+        </p>
+      </div>
+
+      <div class="panel-content js-panel-content js-panel-content-merge" data-step="merge">
+        <h3>合并分支，然后部署</h3>
+        <p>
+          一旦已经审核了你的 Pull Request 并且分支通过了你的测试，就是把你的代码合并到主分支，等待部署的时间了。
+          在把代码合并到 GitHub 上的仓库之前，如果你想测试代码，你可以先在本地执行合并操作。如果你没有仓库的推送权限，这也是很方便的。
+        </p>
+        <p>一旦合并之后，Pull Requests 会保留代码的历史修改记录。因为它们是可搜索的，它们让人可以回到过去，去理解为什么做这个决定以及怎样做的决定。</p>
+        <h4>深度技巧</h4>
+          通过在你的 Pull Request 中包含一定的关键字，你可以用代码关联 issues。在你的 Pull Request 被合并的时候，与其相关的 issues 也会关闭。
+          例如，输入这个短语 <code>Closes #32</code> 将会关闭仓库中编号为32的 issue。更多信息，查看我们的
+          <a href="https://help.github.com/articles/closing-issues-via-commit-messages">帮助文档</a>。
+        </p>
+      </div>
+
+      <a href="#" class="panel-nav prev js-panel-nav-prev" title="Previous" data-proofer-ignore>
+        <span class="mega-octicon octicon-chevron-left"></span>
+      </a>
+
+      <a href="#" class="panel-nav next js-panel-nav-next" title="Next" data-proofer-ignore>
+        <span class="mega-octicon octicon-chevron-right"></span>
+      </a>
     </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-2" data-diagram-step="commits">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-3" data-diagram-step="commits">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon js-diagram-icon diagram-icon-pr" data-diagram-step="pr">
-      <span class="mega-octicon octicon-git-pull-request"></span>
-    </div>
-    <div class="diagram-icon js-diagram-icon diagram-icon-merge" data-diagram-step="merge">
-      <span class="mega-octicon octicon-git-merge"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-1" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-comment-discussion"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-4" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-2" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-comment-discussion"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-5" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-3" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-comment-discussion"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-6" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-4" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-comment-discussion"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-commit-7" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-git-commit"></span>
-    </div>
-    <div class="diagram-icon-small js-diagram-icon-small diagram-icon-discussion-5" data-diagram-step="code-review">
-      <span class="mega-octicon octicon-comment-discussion"></span>
-    </div>
-  </div>
-</div>
-
-<div class="flow-content">
-
-  <div class="panel-content js-panel-content js-panel-content-branch" data-step="branch">
-    <h3>创建一个分支</h3>
-
-    <p>
-      当你在开发一个项目的时候，一般在同一时刻你会同时开展多个想法，其中一些比较成熟了，另一些还是很初级。有了分支就可以很好的来进行管理了。
-    </p>
-
-    <p>
-      当你在项目中创建一个分支的时候，你正在搭建一个可以尝试新想法的环境。你在新分支上所做的修改不会影响到<code>主（master）</code>
-      分支，所以你能自由实验和提交修改，在知道你的分支不会被合并直到它准备好了由你的合作伙伴审阅的情况下，所有操作都是安全的。
-    </p>
-
-    <h4>深度技巧</h4>
-    <p>
-      分支是 Git 的一个核心概念，整个 GitHub Flow 也是基于它的。只有一个规则：<code>主（master）</code>分支上的任何内容总是可部署的。
-    </p>
-    <p>
-      正因为如此，当开发一个新功能或者修复错误的时候，你的新分支独立于主分支是极其重要的。你的分支名应该见名知义（
-      例如，<code>重构身份认证</code>，<code>用户内容缓冲键值</code>，<code>制作 retina 头像</code>），
-      以便让其他人知道你正在做什么工作。
-    </p>
-  </div>
-
-  <div class="panel-content js-panel-content js-panel-content-commits" data-step="commits">
-    <h3>添加新版本</h3>
-    <p>
-      一旦你的分支创建好之后，就可以开始做些修改了。不论何时你添加，编辑或者删除一个文件，你就做一个版本，然后把它们添加到你的分支中。
-      添加版本的过程就跟踪了你在一个功能分支上的工作进展。
-    </p>
-    <p>
-      版本也为你的工作创建了一个透明的历史，其他人可以跟随着去理解你所做的工作以及为什么要这样做。每一个版本都有一条相关联的版本信息，
-      版本信息是一段描述，解释了为什么要做这样一个特殊的修改。此外，每一个版本都可以看作是一个独立的修改单元。
-      这可以让你回滚这些更改，若你发现一个 bug，或者决定在一个不同方向尝试的时候。
-    </p>
-
-    <h4>深度技巧</h4>
-    <p>
-      版本信息很重要，尤其因为 Git 能跟踪你的修改，一旦这些修改被推送到服务器上，Git 会以版本的形式显示它们。
-      通过书写清楚的版本信息，你可以更容易让其他人跟随你的修改并提供反馈。
-    </p>
-  </div>
-
-  <div class="panel-content js-panel-content js-panel-content-pr" data-step="pr">
-    <h3>开启一个 Pull Request</h3>
-    <p>Pull Requests 发起讨论你的版本。因为它们与底层的 Git 仓库紧密地集成起来，任何人都能确切地看到什么修改应该合并，若他们接受你的请求。</p>
-    <p>
-      在开发过程中的任意时点，你都可以开启一个 Pull Request：当你有很少或没有代码，但想要分享一些截图或基本想法的时候，
-      当你陷入困境需要帮助和建议的时候，或者当你准备好让他人审核你工作的时候。通过在你的 Pull Request
-      信息中使用 GitHub 的 @mention 系统，你可以向特定的人或团队请求反馈，不管他们身处大厅还是离你有十个时区之遥。
-    </p>
-
-    <h4>深度技巧</h4>
-    <p>
-      Pull Requests 对贡献开源项目和管理共享仓库的变动是非常有用的。若你正使用 Fork &amp; Pull 模式，Pull Resquests
-      提供了一种方式来通知项目维护者你希望他们考虑一下你提交的修改。若你正使用一个共享仓库模式，在提议修改被合并到主分支中之前，Pull Resquests
-      帮助启动对修改的代码审核和讨论。
-    </p>
-  </div>
-
-  <div class="panel-content js-panel-content js-panel-content-code-review" data-step="code-review">
-
-    <h3>讨论和代码审核</h3>
-    <p>
-      一旦成功开启了一个 Pull Request，审核你所做修改的人或团队可能会提出问题或评论。可能是编码风格不符合项目指南，
-      修改缺少单元测试，或许一切看起来都很棒且支持也整齐有序。Pull Requests 就是为鼓励和捕捉这种类型的讨论而设计的。
-    </p>
-    <p>
-      根据对你所做版本的讨论和反馈，你也可以继续往你的分支上推送代码。若有人评论说你忘记做某件事或你的代码中存在
-      bug，你可以在你的分支中修复它，并提交这些修改。Github 将会在一个统一的
-      Pull Request 视图中展示你的新版本和你可能收到的任何额外的反馈。
-    </p>
-
-    <h4>深度技巧</h4>
-    <p>
-      Pull Request 评论是用 Markdown 书写的，所以你可以在评论中嵌入图片和
-      emoji 表情符号，使用带有格式的文本块，和其它轻量级格式。
-    </p>
-
-  </div>
-
-  <div class="panel-content js-panel-content js-panel-content-merge" data-step="merge">
-
-    <h3>合并分支，然后部署</h3>
-
-    <p>Once your Pull Request has been reviewed and the branch passes your tests, it's time to merge your code to the master branch for deployment. If you want to test things before merging in the repository on GitHub, you can perform the merge locally first. This is also handy if you don't have push access to the repository.</p>
-
-    <p>Once merged, Pull Requests preserve a record of the historical changes to your code. Because they're searchable, they let anyone go back in time to understand why and how a decision was made.</p>
-
-    <h4>深度技巧</h4>
-
-    <p>By incorporating certain keywords into the text of your Pull Request, you can associate issues with code. When your Pull Request is merged, the related issues are also closed. For example, entering the phrase <code>Closes #32</code> would close issue number 32 in the repository. For more information, check out our <a href="https://help.github.com/articles/closing-issues-via-commit-messages">help article</a>.</p>
-  </div>
-
-  <a href="#" class="panel-nav prev js-panel-nav-prev" title="Previous" data-proofer-ignore>
-    <span class="mega-octicon octicon-chevron-left"></span>
-  </a>
-
-  <a href="#" class="panel-nav next js-panel-nav-next" title="Next" data-proofer-ignore>
-    <span class="mega-octicon octicon-chevron-right"></span>
-  </a>
-</div>
-      <p class="last-updated">最新更新2013年12月12日</p>
+    <p class="last-updated">最新更新2013年12月12日</p>
     </div>
   </div>
 </article>
 
-  <footer>
-    <div class="wrap">
-      <span class="mega-octicon octicon-mark-github"></span>
-      <p>
-        <a href="https://github.com">GitHub</a> is the best way to build and ship software.<br />
-        Powerful collaboration, code review, and code management for open source and private projects.
-      </p>
-    </div>
-  </footer>
+<footer>
+  <div class="wrap">
+    <span class="mega-octicon octicon-mark-github"></span>
+    <p>
+      <a href="https://github.com">GitHub</a> is the best way to build and ship software.<br />
+      Powerful collaboration, code review, and code management for open source and private projects.
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
